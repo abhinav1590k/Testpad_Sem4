@@ -1,0 +1,2 @@
+Answer :---
+            MyProgram.java is a scource code file typed by the programmer, and MyProgram.class is a complied executable class file that is run by thhe JVM.

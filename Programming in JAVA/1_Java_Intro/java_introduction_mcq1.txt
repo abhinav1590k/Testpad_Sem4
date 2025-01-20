@@ -1,0 +1,2 @@
+Answer:--
+        Java is just like c++ , but implemented in different way to make it portable and universal.
