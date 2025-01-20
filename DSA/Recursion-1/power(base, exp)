@@ -1,0 +1,20 @@
+class Result {
+    static long power(int base, int exp) {
+        // Base case: if exponent is 0
+        if (exp == 0) {
+            return 1; // Any number raised to the power of 0 is 1
+        }
+        // If exponent is negative, return -1
+        if (exp < 0) {
+            return -1;
+        }
+        // If exponent is even
+        if (exp % 2 == 0) {
+            long halfPower = power(base, exp / 2);
+            return halfPower * halfPower; // (base^(exp/2))^2
+        } else {
+            // If exponent is odd
+            return base * power(base, exp - 1); // base * base^(exp-1)
+        }
+    }
+}
