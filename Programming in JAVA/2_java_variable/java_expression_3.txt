@@ -1,0 +1,11 @@
+Answwer:---
+
+Dear -Programmer-,
+
+I am a computer software, 
+which understands only binary language
+So, kindly provide input in binary only.
+
+
+Sincerely
+JVM
