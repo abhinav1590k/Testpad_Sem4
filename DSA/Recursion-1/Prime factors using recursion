@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        // Start the recursive function to print prime factors
+        printPrimeFactors(n, 2);
+        scanner.close();
+    }
+    // Recursive function to print prime factors
+    public static void printPrimeFactors(int n, int divisor) {
+        // Base case: if n is 1, we stop the recursion
+        if (n == 1) {
+            return;
+        }
+        // If the current divisor divides n, it's a prime factor
+        if (n % divisor == 0) {
+            System.out.println(divisor); // Print the prime factor
+            // Call the function recursively with the reduced n
+            printPrimeFactors(n / divisor, divisor);
+        } else {
+            // If the current divisor does not divide n, try the next number
+            printPrimeFactors(n, divisor + 1);
+        }
+    }
+}
