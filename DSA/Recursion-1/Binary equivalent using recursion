@@ -1,0 +1,12 @@
+class Result {
+    static int decimalToBinary(int n) {
+        // Base case: if n is 0, return 0
+        if (n == 0) {
+            return 0;
+        }
+        // Recursive call to get the binary representation of n / 2
+        int binary = decimalToBinary(n / 2);
+        // Get the last digit (0 or 1) and append it to the result
+        return binary * 10 + (n % 2);
+    }
+}
