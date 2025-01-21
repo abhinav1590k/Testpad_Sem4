@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = Integer.parseInt(scanner.nextLine().trim()); // Number of test cases
+        while (T > 0) {
+            T--;
+            int n = scanner.nextInt(); // Size of the array
+            int k = scanner.nextInt(); // Target number
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++) {
+                arr[i] = scanner.nextInt(); // Read the array elements
+            }
+            System.out.println(findFirstOccurrence(arr, n, k)); // Output the result
+        }
+        scanner.close();
+    }
+    static int findFirstOccurrence(int[] arr, int n, int k) {
+        int left = 0;
+        int right = n - 1;
+        int result = -1; // To store the index of the first occurrence
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] == k) {
+                result = mid; // Found K, store the index
+                right = mid - 1; // Continue searching in the left half
+            } else if (arr[mid] < k) {
+                left = mid + 1; // Move to the right half
+            } else {
+                right = mid - 1; // Move to the left half
+            }
+        }
+        return result; // Return the index of the first occurrence or -1 if not found
+    }
+}
