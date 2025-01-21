@@ -1,0 +1,28 @@
+class Result {
+    static int searchRotatedSortedArray(int arr[], int k) {
+        int left = 0;
+        int right = arr.length - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            // Check if the mid element is the target
+            if (arr[mid] == k) {
+                return mid; // Found the target
+            }
+            // Check which side is sorted
+            if (arr[left] <= arr[mid]) { // Left side is sorted
+                if (arr[left] <= k && k < arr[mid]) {
+                    right = mid - 1; // Search in the left half
+                } else {
+                    left = mid + 1; // Search in the right half
+                }
+            } else { // Right side is sorted
+                if (arr[mid] < k && k <= arr[right]) {
+                    left = mid + 1; // Search in the right half
+                } else {
+                    right = mid - 1; // Search in the left half
+                }
+            }
+        }
+        return -1; // Target not found
+    }
+}
