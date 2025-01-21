@@ -1,0 +1,28 @@
+//In C lang
+
+#include <stdlib.h>
+int* mergeArrays(int a[], int b[], int asize, int bsize) {
+    // Allocate memory for the merged array
+    int* merged = (int*)malloc((asize + bsize) * sizeof(int));
+    if (merged == NULL) {
+        return NULL; // Handle memory allocation failure
+    }
+    int i = 0, j = 0, k = 0;
+    // Merge the two arrays
+    while (i < asize && j < bsize) {
+        if (a[i] < b[j]) {
+            merged[k++] = a[i++];
+        } else {
+            merged[k++] = b[j++];
+        }
+    }
+    // Copy remaining elements of a[] if any
+    while (i < asize) {
+        merged[k++] = a[i++];
+    }
+    // Copy remaining elements of b[] if any
+    while (j < bsize) {
+        merged[k++] = b[j++];
+    }
+    return merged; // Return the base address of the merged array
+}
