@@ -1,0 +1,35 @@
+// in java
+
+static int kthLargest(int arr[], int size, int k) {
+    return quickSelect(arr, 0, size - 1, size - k - 1);
+}
+private static int quickSelect(int[] arr, int left, int right, int targetIndex) {
+    if (left == right) {
+        return arr[left];
+    }
+    int pivotIndex = partition(arr, left, right);
+    if (pivotIndex == targetIndex) {
+        return arr[pivotIndex];
+    } else if (pivotIndex < targetIndex) {
+        return quickSelect(arr, pivotIndex + 1, right, targetIndex);
+    } else {
+        return quickSelect(arr, left, pivotIndex - 1, targetIndex);
+    }
+}
+private static int partition(int[] arr, int left, int right) {
+    int pivot = arr[right];
+    int i = left;
+    for (int j = left; j < right; j++) {
+        if (arr[j] <= pivot) {
+            swap(arr, i, j);
+            i++;
+        }
+    }
+    swap(arr, i, right);
+    return i;
+}
+private static void swap(int[] arr, int i, int j) {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
