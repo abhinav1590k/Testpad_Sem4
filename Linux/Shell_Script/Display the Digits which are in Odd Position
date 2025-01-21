@@ -1,0 +1,11 @@
+# Write your script here
+#!/bin/bash
+# Read the input number
+read -p "Enter a number: " number
+# Loop through each character in the number
+for (( i=0; i<${#number}; i++ )); do
+    # Check if the position (i+1) is odd
+    if (( (i + 1) % 2 != 0 )); then
+        echo "${number:i:1}"  # Print the digit at the odd position
+    fi
+done
