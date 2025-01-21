@@ -1,0 +1,23 @@
+//In java
+class Result {
+    public static int maxFrequency(int[] a, int n) {
+        // Frequency array for numbers from 0 to 1000
+        int[] frequency = new int[1001];
+        // Count the frequency of each number
+        for (int i = 0; i < n; i++) {
+            frequency[a[i]]++;
+        }
+        // Find the number with the maximum frequency
+        int maxFreq = 0;
+        int minNumWithMaxFreq = Integer.MAX_VALUE;
+        for (int i = 0; i < frequency.length; i++) {
+            if (frequency[i] > maxFreq) {
+                maxFreq = frequency[i];
+                minNumWithMaxFreq = i; // Update the smallest number with max frequency
+            } else if (frequency[i] == maxFreq) {
+                minNumWithMaxFreq = Math.min(minNumWithMaxFreq, i); // Choose the smaller one
+            }
+        }
+        return minNumWithMaxFreq;
+    }
+}
