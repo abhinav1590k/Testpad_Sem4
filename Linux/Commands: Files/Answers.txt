@@ -1,0 +1,44 @@
+man command 
+ans= -i
+
+info command 
+ans = 
+1.  info ls
+2   info cat
+3.  info man
+
+
+who whomi Command 
+
+ans = root 
+
+History Command
+ans= history 15
+
+
+id and unmane Command
+1. Linux
+2. 5.4.0-70-generic
+3. x86_64
+4. GNU/Linux
+5. 0
+6. 0
+
+cal and Date Commands
+1. cal 2022
+2. cal 09 2016
+3. cal -3
+4. date +%Y
+5. date +%u
+6. date +%s
+
+Hostname clear&reboot commands
+reboot --force
+
+help uptime free
+1. help cd
+2. uptime
+3. tty
+
+
+
