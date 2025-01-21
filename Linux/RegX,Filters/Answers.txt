@@ -1,0 +1,8 @@
+Process-1
+ans= Kill
+Process-2
+ans = ps
+Process-3
+ans= init
+Process-4
+ans= renice
