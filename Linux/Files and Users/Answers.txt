@@ -1,0 +1,8 @@
+Searching files
+ans - option 3rd the given command finds all the files with extenstion cpp and sixe greater than 10 kb and removes it 
+
+Managing Users-1
+ans last option  /etc/shadow
+
+Managing User -2
+ans 2nd option the id of the root user
