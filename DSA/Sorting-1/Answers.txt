@@ -1,0 +1,23 @@
+Sorting of Data-1 -->
+1.)Adaptive
+4
+
+2.)Internal
+2
+
+3.)External
+3
+
+4.)Stable
+1
+
+Bubble Sort-1--> (a)
+Bubble Sort-2--> (a)
+Bubble Sort-3--> (a)
+Bubble Sort-4--> (a)
+
+Selection Sort -1--> (b)
+Selection Sort -2--> (a)
+Selection Sort -3--> (a)
+Selection Sort -4--> (b)
+Selection Sort -5--> (b)
