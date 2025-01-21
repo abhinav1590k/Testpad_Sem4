@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int T = scanner.nextInt(); // Number of test cases
+        while (T > 0) {
+            T--;
+            int n = scanner.nextInt(); // Size of the array
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++) {
+                arr[i] = scanner.nextInt(); // Read the array elements
+            }
+            System.out.println(rotationCount(arr, n)); // Output the result
+        }
+        scanner.close();
+    }
+    static int rotationCount(int[] array, int size) {
+        int left = 0;
+        int right = size - 1;
+        // If the array is not rotated
+        if (array[left] < array[right]) {
+            return -1;
+        }
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            // Check if mid is the minimum element
+            if (mid > 0 && array[mid] < array[mid - 1]) {
+                return mid; // Found the minimum element
+            }
+            if (array[mid] >= array[left]) {
+                // Left half is sorted, move to the right half
+                left = mid + 1;
+            } else {
+                // Right half is sorted, move to the left half
+                right = mid - 1;
+            }
+        }
+        return -1; // This line should not be reached
+    }
+}
