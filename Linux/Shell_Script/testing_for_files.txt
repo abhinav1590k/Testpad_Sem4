@@ -1,0 +1,6 @@
+read -r file_path
+if [ -e "$file_path" ]; then
+    echo "Exists"
+else
+    echo "Not Exists"
+fi
