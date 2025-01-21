@@ -1,0 +1,11 @@
+# Write your script here
+#!/bin/bash
+# Read the input number
+read -p "Enter a number: " number
+# Initialize a counter
+counter=$number
+# Use a while loop to print numbers in reverse order
+while [ $counter -ge 1 ]; do
+    echo $counter  # Print the current number
+    ((counter--))  # Decrement the counter
+done
