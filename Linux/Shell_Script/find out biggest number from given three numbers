@@ -1,0 +1,18 @@
+# Write your script here
+#!/bin/bash
+# Read three numbers from input
+read num1
+read num2
+read num3
+# Initialize largest with the first number
+largest=$num1
+# Compare with the second number
+if [ "$num2" -gt "$largest" ]; then
+    largest=$num2
+fi
+# Compare with the third number
+if [ "$num3" -gt "$largest" ]; then
+    largest=$num3
+fi
+# Print the largest number
+echo "$largest"
