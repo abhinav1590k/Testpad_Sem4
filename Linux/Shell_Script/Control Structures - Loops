@@ -1,0 +1,16 @@
+# Write your script here
+#!/bin/bash
+# Read the number of integers
+read N
+# Initialize a counter for even numbers
+even_count=0
+# Loop through the next N lines to read integers
+for (( i=0; i<N; i++ ))
+do
+    read num  # Read the integer
+    if (( num % 2 == 0 )); then  # Check if the number is even
+        ((even_count++))  # Increment the even count
+    fi
+done
+# Print the count of even numbers
+echo $even_count
