@@ -1,1 +1,12 @@
+Binary Search-1 -> (a)Order of the list
 
+Binary Search-2 ->
+1.)First Call
+9
+2.)Second Call
+29
+
+
+Binary Search-3 -> (b)
+
+Binary Search-4 -> (b)
