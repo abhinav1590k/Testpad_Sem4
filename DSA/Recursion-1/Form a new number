@@ -1,0 +1,17 @@
+//In C lang
+
+int evenDigits(int n)
+{
+    // Base case: if n is a single digit, return it if it's even, otherwise return 0
+    if (n < 10 && n > -10) {
+        return (n % 2 == 0) ? n : 0;
+    }
+    // Recursive case:
+    int lastDigit = n % 10;          // Extract the last digit
+    int remaining = n / 10;          // Remove the last digit
+    if (lastDigit % 2 == 0) {        // Check if the last digit is even
+        return evenDigits(remaining) * 10 + lastDigit;
+    } else {
+        return evenDigits(remaining); // Ignore odd digits
+    }
+}
