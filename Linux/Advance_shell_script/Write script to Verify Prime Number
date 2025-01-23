@@ -1,0 +1,28 @@
+#!/bin/bash
+# Function to verify if the number is prime
+verifyPrime() {
+    num=$1  # Access the parameter using $1
+    # Check if the number is a valid integer
+    if ! [[ "$num" =~ ^[0-9]+$ ]]; then
+        return
+    fi
+    # Check if the number is less than 2 (not prime)
+    if [ "$num" -lt 2 ]; then
+        echo "NOT PRIME"
+        return
+    fi
+    # Check for divisibility from 2 to sqrt(num)
+    for ((i=2; i*i<=num; i++))
+    do
+        if ((num % i == 0)); then
+            echo "NOT PRIME"
+            return
+        fi
+    done
+    # If no divisor was found, it is prime
+    echo "PRIME"
+}
+# Read the input number
+read -p "Enter a number: " number
+# Call the function to verify if the number is prime
+verifyPrime "$number"
