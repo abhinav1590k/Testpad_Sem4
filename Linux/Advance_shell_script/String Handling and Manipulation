@@ -1,0 +1,20 @@
+# Write your script here
+#!/bin/bash
+# Read the three input strings
+read -p "Enter first string: " string1
+read -p "Enter second string: " string2
+read -p "Enter third string: " string3
+# Concatenate the strings
+concatenated="$string1$string2$string3"
+# Print the concatenated string
+echo "$concatenated"
+# Print the length of the concatenated string
+length=${#concatenated}
+echo "$length"
+# Read the two integers x and y
+read -p "Enter starting position (x): " x
+read -p "Enter length (y): " y
+# Extract the substring
+substring="${concatenated:x:y}"
+# Print the substring
+echo "$substring"
