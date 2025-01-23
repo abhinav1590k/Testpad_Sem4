@@ -1,0 +1,18 @@
+#!/bin/bash
+# Function to verify if the number is palindrome
+verifyPalindrome() {
+    num=$1
+    # Reverse the number
+    reversed=$(echo "$num" | rev)
+    # Check if the original number is the same as the reversed number
+    if [ "$num" == "$reversed" ]; then
+        echo "Yes"  # It's a palindrome
+    else
+        echo "No"   # It's not a palindrome
+    fi
+}
+# Ensure the script only accepts a single input
+if [ $# -eq 1 ]; then
+    # Call the function to verify palindrome
+    verifyPalindrome "$1"
+fi
