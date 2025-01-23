@@ -1,0 +1,12 @@
+#!/bin/bash
+# Read the input strings
+read main_string
+read sub_string
+# Use the `grep` command to search for the substring in the main string
+position=$(echo "$main_string" | grep -b -o "$sub_string" | head -n 1 | cut -d ':' -f 1)
+# Check if the substring was found
+if [ -z "$position" ]; then
+    echo "-1"  # Substring not found
+else
+    echo "$((position + 1))"  # Adjust for 1-based indexing
+fi
