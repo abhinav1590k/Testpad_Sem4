@@ -1,0 +1,15 @@
+# Start writing your script
+#!/bin/bash
+# Read the input integer
+read -p "Enter a day number (1-7): " day_number
+# Use a case statement to determine the day name
+case $day_number in
+    1) echo "Monday" ;;
+    2) echo "Tuesday" ;;
+    3) echo "Wednesday" ;;
+    4) echo "Thursday" ;;
+    5) echo "Friday" ;;
+    6) echo "Saturday" ;;
+    7) echo "Sunday" ;;
+    *) echo "Invalid Day Number" ;;
+esac
