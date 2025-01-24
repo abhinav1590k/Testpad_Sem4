@@ -1,0 +1,28 @@
+class Result {
+    // Print the resultant matrix after (A * B)
+    static void multiplyMatrix(int A[][], int B[][], int R1, int C1, int R2, int C2) {
+        // Check if multiplication is possible
+        if (C1 != R2) {
+            System.out.println("Matrix multiplication not possible.");
+            return;
+        }
+        // Create the result matrix
+        int[][] result = new int[R1][C2];
+        // Perform matrix multiplication
+        for (int i = 0; i < R1; i++) {
+            for (int j = 0; j < C2; j++) {
+                result[i][j] = 0; // Initialize the result cell
+                for (int k = 0; k < C1; k++) {
+                    result[i][j] += A[i][k] * B[k][j];
+                }
+            }
+        }
+        // Print the resultant matrix
+        for (int i = 0; i < R1; i++) {
+            for (int j = 0; j < C2; j++) {
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
