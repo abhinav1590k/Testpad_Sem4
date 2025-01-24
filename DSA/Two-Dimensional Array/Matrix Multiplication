@@ -1,3 +1,5 @@
+//java
+
 class Result {
     // Print the resultant matrix after (A * B)
     static void multiplyMatrix(int A[][], int B[][], int R1, int C1, int R2, int C2) {
