@@ -1,0 +1,49 @@
+class Result {
+    // Convert integer to string
+    static String itoa(int num) {
+        // Handle zero explicitly, as num == 0 case is tricky in recursion
+        if (num == 0) {
+            return "0";
+        }
+        // Handle negative numbers
+        if (num < 0) {
+            return "-" + itoa(-num);
+        }
+        // Base case for recursion
+        if (num < 10) {
+            return String.valueOf((char) ('0' + num));  // Convert single digit
+        }
+        // Recursive call
+        return itoa(num / 10) + (char) ('0' + (num % 10));
+    }
+    // Convert string to integer
+    static int atoi(String str) {
+        // Trim leading spaces and remove quotes
+        str = str.trim().replace("\"", "");
+        // Check for negative number
+        boolean isNegative = false;
+        if (str.charAt(0) == '-') {
+            isNegative = true;
+            str = str.substring(1);  // Remove the negative sign
+        }
+        // Parse the string as integer
+        int result = atoiHelper(str, 0, 0);
+        // If it was negative, return the negative value
+        return isNegative ? -result : result;
+    }
+    // Helper function for atoi
+    private static int atoiHelper(String str, int index, int result) {
+        // Base case: if we reach the end of the string
+        if (index == str.length()) {
+            return result;
+        }
+        // Convert character to integer
+        char ch = str.charAt(index);
+        if (ch >= '0' && ch <= '9') {
+            result = result * 10 + (ch - '0');
+            return atoiHelper(str, index + 1, result);
+        }
+        // Handle invalid characters (optional)
+        return result; // Return the result so far
+    }
+}
