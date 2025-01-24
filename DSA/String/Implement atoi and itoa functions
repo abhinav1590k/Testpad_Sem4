@@ -1,3 +1,4 @@
+//java
 class Result {
     // Convert integer to string
     static String itoa(int num) {
