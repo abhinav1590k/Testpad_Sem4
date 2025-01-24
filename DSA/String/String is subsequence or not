@@ -1,0 +1,24 @@
+class Result {
+    // Return true if the str2 is a subsequence of str1, else return false
+    static boolean strSubsequence(String str1, String str2) {
+        int m = str1.length();
+        int n = str2.length();
+        // If str2 is longer than str1, it cannot be a subsequence
+        if (n > m) {
+            return false;
+        }
+        int j = 0; // Pointer for str2
+        for (int i = 0; i < m; i++) {
+            // If characters match, move the pointer for str2
+            if (j < n && str1.charAt(i) == str2.charAt(j)) {
+                j++;
+            }
+            // If we have matched all characters of str2
+            if (j == n) {
+                return true;
+            }
+        }
+        // If we finish the loop and haven't matched all characters of str2
+        return j == n;
+    }
+}
