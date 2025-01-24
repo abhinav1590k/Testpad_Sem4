@@ -1,0 +1,14 @@
+class Result {
+    // Return the updated string
+    static String getDesiredString(String str) {
+        StringBuilder result = new StringBuilder();
+        // Iterate through the string
+        for (int i = 0; i < str.length(); i++) {
+            // If it's the first character or different from the last added character
+            if (i == 0 || str.charAt(i) != str.charAt(i - 1)) {
+                result.append(str.charAt(i)); // Add the character to the result
+            }
+        }
+        return result.toString(); // Convert StringBuilder to String
+    }
+}
