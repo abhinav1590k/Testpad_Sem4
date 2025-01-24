@@ -1,3 +1,5 @@
+//java
+
 class Result {
     static void printSpiral(int a[][], int r, int c) {
         int top = 0, bottom = r - 1, left = 0, right = c - 1;
