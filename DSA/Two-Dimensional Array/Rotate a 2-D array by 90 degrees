@@ -1,0 +1,56 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt(); // Read number of test cases
+        while (T-- > 0) {
+            int N = sc.nextInt(); // Read the size of the matrix
+            int[][] matrix = new int[N][N];
+            // Read the matrix
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < N; j++) {
+                    matrix[i][j] = sc.nextInt();
+                }
+            }
+            // Rotate the matrix by 90 degrees clockwise
+            rotateMatrix(matrix, N);
+            // Print the rotated matrix
+            printMatrix(matrix, N);
+        }
+        sc.close(); // Close the scanner
+    }
+    // Function to rotate the matrix by 90 degrees clockwise
+    private static void rotateMatrix(int[][] matrix, int N) {
+        // Transpose the matrix
+        for (int i = 0; i < N; i++) {
+            for (int j = i + 1; j < N; j++) {
+                // Swap elements
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+        }
+        // Reverse each row
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N / 2; j++) {
+                // Swap elements
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[i][N - j - 1];
+                matrix[i][N - j - 1] = temp;
+            }
+        }
+    }
+    // Function to print the matrix
+    private static void printMatrix(int[][] matrix, int N) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                System.out.print(matrix[i][j]);
+                if (j < N - 1) {
+                    System.out.print(" "); // Print space between elements
+                }
+            }
+            System.out.println(); // New line after each row
+        }
+        System.out.println(); // Extra line after each test case
+    }
+}
