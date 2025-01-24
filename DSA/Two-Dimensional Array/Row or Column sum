@@ -1,0 +1,28 @@
+// IN C LANGUAGE
+
+long solveQuery(int N, int W, int i, char ch) {
+    // Calculate total number of rows
+    long total_rows = (N + W - 1) / W; // Equivalent to ceil(N / W)
+    if (ch == 'R') {
+        // Check if the row exists
+        if (i > total_rows) {
+            return 0; // Row does not exist
+        }
+        // Calculate the sum of the i-th row
+        long start = (i - 1) * W + 1; // First number in the i-th row
+        long end = (i * W < N) ? (i * W) : N; // Last number in the i-th row
+        return (end >= start) ? (end - start + 1) * (start + end) / 2 : 0; // Sum of the row
+    } else if (ch == 'C') {
+        // Check if the column exists
+        if (i > W) {
+            return 0; // Column does not exist
+        }
+        // Calculate the sum of the i-th column
+        long sum = 0;
+        for (long k = 0; i + k * W <= N; k++) {
+            sum += (i + k * W); // Add the current element in the column
+        }
+        return sum;
+    }
+    return 0; // Invalid query
+}
