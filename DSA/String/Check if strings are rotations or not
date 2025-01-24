@@ -1,0 +1,17 @@
+class Result {
+    // return 1 for YES and 0 for NO.
+    static int isRotation(String str1, String str2) {
+        // Check if lengths are equal
+        if (str1.length() != str2.length()) {
+            return 0; // Not a rotation
+        }
+        // Concatenate str2 with itself
+        String concatenated = str2 + str2;
+        // Check if str1 is a substring of the concatenated string
+        if (concatenated.contains(str1)) {
+            return 1; // str1 is a rotation of str2
+        } else {
+            return 0; // Not a rotation
+        }
+    }
+}
