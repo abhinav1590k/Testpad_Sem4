@@ -1,0 +1,31 @@
+class Result {
+    static void printSpiral(int a[][], int r, int c) {
+        int top = 0, bottom = r - 1, left = 0, right = c - 1;
+        while (top <= bottom && left <= right) {
+            // Traverse from left to right
+            for (int i = left; i <= right; i++) {
+                System.out.println(a[top][i]);
+            }
+            top++; // Move down to the next row
+            // Traverse from top to bottom
+            for (int i = top; i <= bottom; i++) {
+                System.out.println(a[i][right]);
+            }
+            right--; // Move left to the next column
+            if (top <= bottom) {
+                // Traverse from right to left
+                for (int i = right; i >= left; i--) {
+                    System.out.println(a[bottom][i]);
+                }
+                bottom--; // Move up to the previous row
+            }
+            if (left <= right) {
+                // Traverse from bottom to top
+                for (int i = bottom; i >= top; i--) {
+                    System.out.println(a[i][left]);
+                }
+                left++; // Move right to the next column
+            }
+        }
+    }
+}
