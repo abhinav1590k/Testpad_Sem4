@@ -1,0 +1,12 @@
+// Overloaded sum() function for 2 numbers
+    public static int sum(int a, int b) {
+        return a + b;
+    }
+    // Overloaded sum() function for 3 numbers
+    public static int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+    // Overloaded sum() function for 4 numbers
+    public static int sum(int a, int b, int c, int d) {
+        return a + b + c + d;
+    }
