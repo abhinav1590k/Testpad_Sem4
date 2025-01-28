@@ -1,0 +1,5 @@
+// Function to count the number of digits in a positive integer
+    public int countDigits(int number) {
+        // Convert the number to a string and return its length
+        return String.valueOf(number).length();
+    }
