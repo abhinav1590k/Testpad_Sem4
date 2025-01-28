@@ -1,0 +1,44 @@
+class TimeSpan {
+    private int hours;   // Number of hours
+    private int minutes; // Number of minutes
+    // Constructor to initialize the TimeSpan object
+    public TimeSpan(int hours, int minutes) {
+        this.hours = hours + minutes / 60; // Convert minutes to hours
+        this.minutes = minutes % 60;        // Keep minutes in the range of 0-59
+    }
+    // Method to get the number of hours
+    public int getHours() {
+        return hours;
+    }
+    // Method to get the number of minutes
+    public int getMinutes() {
+        return minutes;
+    }
+    // Method to add hours and minutes to the current TimeSpan
+    public void add(int hours, int minutes) {
+        this.hours += hours;
+        this.minutes += minutes;
+        normalize(); // Normalize the time span
+    }
+    // Method to add another TimeSpan object to the current TimeSpan
+    public void add(TimeSpan tp) {
+        this.hours += tp.getHours();
+        this.minutes += tp.getMinutes();
+        normalize(); // Normalize the time span
+    }
+    // Method to get the total time in hours as a real number
+    public double getTotalHours() {
+        return hours + (double) minutes / 60; // Convert minutes to fractional hours
+    }
+    // Method to normalize the hours and minutes
+    private void normalize() {
+        if (minutes >= 60) {
+            hours += minutes / 60; // Convert excess minutes to hours
+            minutes = minutes % 60; // Keep minutes in the range of 0-59
+        }
+    }
+    // Method to return a string representation of the time span
+    public String toString() {
+        return hours + " Hours, " + minutes + " Minutes";
+    }
+}
