@@ -1,0 +1,77 @@
+class Date {
+    private int month; // Month (1-12)
+    private int day;   // Day (1-31 depending on the month)
+    // Constructor to initialize the Date object
+    public Date(int m, int d) {
+        this.month = m;
+        this.day = d;
+    }
+    // Method to return the number of days in the month
+    public int daysInMonth() {
+        switch (month) {
+            case 1: return 31; // January
+            case 2: return 28; // February (ignoring leap years)
+            case 3: return 31; // March
+            case 4: return 30; // April
+            case 5: return 31; // May
+            case 6: return 30; // June
+            case 7: return 31; // July
+            case 8: return 31; // August
+            case 9: return 30; // September
+            case 10: return 31; // October
+            case 11: return 30; // November
+            case 12: return 31; // December
+            default: return 0; // Invalid month
+        }
+    }
+    // Method to return the day
+    public int getDay() {
+        return day;
+    }
+    // Method to return the month
+    public int getMonth() {
+        return month;
+    }
+    // Method to advance the date to the next day
+    public void nextDay() {
+        day++;
+        if (day > daysInMonth()) {
+            day = 1; // Reset day to 1
+            month++; // Move to the next month
+            if (month > 12) {
+                month = 1; // Reset month to January
+            }
+        }
+    }
+    // Method to return a string representation of the date
+    public String toString() {
+        return month + "/" + day;
+    }
+    // Method to return the absolute day of the year
+    public int absoluteDay() {
+        int totalDays = 0;
+        for (int m = 1; m < month; m++) {
+            totalDays += daysInMonth(m);
+        }
+        totalDays += day; // Add the current day
+        return totalDays;
+    }
+    // Helper method to get the number of days in a specific month
+    private int daysInMonth(int m) {
+        switch (m) {
+            case 1: return 31; // January
+            case 2: return 28; // February
+            case 3: return 31; // March
+            case 4: return 30; // April
+            case 5: return 31; // May
+            case 6: return 30; // June
+            case 7: return 31; // July
+            case 8: return 31; // August
+            case 9: return 30; // September
+            case 10: return 31; // October
+            case 11: return 30; // November
+            case 12: return 31; // December
+            default: return 0; // Invalid month
+        }
+    }
+}
