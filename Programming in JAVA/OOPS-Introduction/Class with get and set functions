@@ -1,0 +1,13 @@
+void setbaseheight(int b, int h) {
+    this.base = b;
+    this.height = h;
+}
+float area() {
+    return 0.5f * base * height; // Area = 0.5 * base * height
+}
+int getBase() {
+    return base;
+}
+int getHeight() {
+    return height;
+}
