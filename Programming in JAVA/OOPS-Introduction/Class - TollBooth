@@ -1,0 +1,46 @@
+import java.util.Scanner;
+class TollBooth {
+    private int totalCars; // Total number of cars
+    private int totalCash; // Total cash collected
+    // Constructor initializes both totals to 0
+    public TollBooth() {
+        totalCars = 0;
+        totalCash = 0;
+    }
+    // Method to count a paying car
+    public void payingCar() {
+        totalCars++;
+        totalCash += 50; // Add 50 Rupees to the cash total
+    }
+    // Method to count a non-paying car
+    public void nopayCar() {
+        totalCars++; // Increment car total only
+    }
+    // Method to display the totals
+    public void display() {
+        System.out.println("Total Cash : " + totalCash + "/-");
+        System.out.println("Total Cars : " + totalCars);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        TollBooth tollBooth = new TollBooth(); // Create a TollBooth object
+        char input;
+        // Loop to process user input
+        while (true) {
+            input = scanner.next().charAt(0); // Read a single character input
+            if (input == 'p') {
+                tollBooth.payingCar(); // Count a paying car
+            } else if (input == 'n') {
+                tollBooth.nopayCar(); // Count a non-paying car
+            } else if (input == 'q') {
+                tollBooth.display(); // Display totals and exit
+                break; // Exit the loop
+            } else {
+                System.out.println("Invalid input. Please press 'p', 'n', or 'q'.");
+            }
+        }
+        scanner.close(); // Close the scanner
+    }
+}
