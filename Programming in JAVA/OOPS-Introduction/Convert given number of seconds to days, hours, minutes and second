@@ -1,0 +1,15 @@
+int getDays(int sec) {
+        return sec / (24 * 3600); // 1 day = 24 hours * 3600 seconds
+    }
+    // Function to get the number of hours from seconds
+    int getHours(int sec) {
+        return (sec % (24 * 3600)) / 3600; // Remaining seconds after days divided by 3600
+    }
+    // Function to get the number of minutes from seconds
+    int getMinutes(int sec) {
+        return (sec % 3600) / 60; // Remaining seconds after hours divided by 60
+    }
+    // Function to get the number of seconds remaining
+    int getSeconds(int sec) {
+        return sec % 60; // Remaining seconds after minutes
+    }
