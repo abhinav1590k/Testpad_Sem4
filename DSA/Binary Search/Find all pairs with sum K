@@ -1,0 +1,18 @@
+class Result {
+  static int getPairsCount(int arr[], int n, int k) {
+    // Map to store the frequency of each element
+    HashMap<Integer, Integer> freqMap = new HashMap<>();
+    int pairCount = 0;
+    for (int i = 0; i < n; i++) {
+      // Calculate the complement
+      int complement = k - arr[i];
+      // Check if the complement exists in the map
+      if (freqMap.containsKey(complement)) {
+        pairCount += freqMap.get(complement); // Add the frequency of the complement
+      }
+      // Update the frequency of the current element in the map
+      freqMap.put(arr[i], freqMap.getOrDefault(arr[i], 0) + 1);
+    }
+    return pairCount;
+  }
+}
