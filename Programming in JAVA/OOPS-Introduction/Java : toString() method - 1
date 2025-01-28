@@ -1,0 +1,9 @@
+public String toString() {
+        // Check if the balance is negative
+        if (balance < 0) {
+            return name + ", " + balance + " (NEGATIVE)";
+        } else {
+            // Format the balance to one decimal place
+            return name + ", " + String.format("%.1f", balance);
+        }
+    }
