@@ -1,0 +1,12 @@
+static int sumOfRange(int min, int max) {
+    // If min is greater than max, return 0
+    if (min > max) {
+        return 0;
+    }
+    // Calculate the sum of the range [min, max]
+    int sum = 0;
+    for (int i = min; i <= max; i++) {
+        sum += i;
+    }
+    return sum;
+}
