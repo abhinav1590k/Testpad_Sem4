@@ -1,1 +1,164 @@
+OOPS - 1 ---(b)                                             
+OOPS - 2 ---(d)
+OOPS - 3 ---
+1.) No
+2.) No
+3.)Yes
+
+OOPS - 4 ---
+1.) No
+2.) Yes
+3.) No
+4.) No
+
+OOPS - 5 ---
+1.) No
+2.) No
+3.) Yes
+4.) No
+
+OOPS - 6 ---
+1.) No
+2.) No
+3.) Yes
+4.) No
+
+OOPS - 7 ---
+1.) Modular
+2.) Monolithic
+3.) Object-Oriented
+
+Java : Static - 1----(d)
+
+Java : Static - 2----
+1.) 40 80
+2.) Error
+
+Java : Static - 3----
+1.)
+11 Arun CodeQuotient
+13 Amit CodeQuotient
+12 Girdhar CodeQuotient
+
+2.)
+11 Arun CQ
+12 Girdhar CQ
+13 Amit CQ
+
+Java : final - 1-----
+1.) N
+2.) Y
+3.) N
+
+Functions in Java : 1----
+1.)m(a, b, c);
+-2 + 4 = 7
+
+2.)m(c, 3, a);
+4 + -2 = 3
+
+3.)m(a + b, b + c, c + a);
+2 + 11 = 5
+
+Functions in Java : 2----
+1.)a=
+12
+
+2.)b=
+2
+
+3.)c=
+16
+
+Functions in Java : 3----
+1.)
+134
+22
+134
+22
+
+2.)
+quotient and coding like code
+code and quotient like coding
+
+Functions in Java : 4----
+1.)cq1(11);
+cq3: x = 23, y = 7
+cq2: x = 12, y = 1, z = 7
+cq1: x = 7, y = 11, z = 12
+
+2.)cq1(21);
+cq3: x = 44, y = 11
+cq2: x = 23, y = 1, z = 11
+cq1: x = 11, y = 21, z = 23
+
+Java : Function Overloading - 1-----
+1.) m1-ii
+2. Error
+3. m1-if
+
+Java : Function Overloading - 2-----
+1.) 7
+2.) 8
+3.) Error
+
+Constructors - 1--------
+1.)
+A constructor is the code that is called when you use the create an object.
+T
+
+2.)
+A constructor is declared without a return type.
+T
+
+3.)
+Constructors are considered bad programming style and should be avoided.
+F
+
+4.)
+A constructor wastes memory in the computer so it should be used sparingly.
+F
+
+5.)
+A constructor is a special method that creates an object and initializes its state.
+T
+
+6.)
+A constructor can be used instead of fields to represent the data inside a class.
+F
+
+7.)
+A class can have many methods but only one constructor.
+F
+
+Java: Constructors - 2----
+1.)
+non-parameterized constructor must be defined first.
+No
+
+2.)
+Constructors must be without return type
+Yes
+
+3.)
+Constructors can not be public
+No
+
+Constructors - 3------
+1.)
+It refers to the object on which a method or constructor has been called (sometimes called the "implicit parameter").
+True
+
+2.)
+It can be used to access or set an object's field values
+True
+
+3.)
+It is used when one object wants to access data from a second object.
+False
+
+4.)
+It is required when a class has more than one constructor.
+False
+
 
