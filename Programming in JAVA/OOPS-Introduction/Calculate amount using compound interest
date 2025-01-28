@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Read the principal amount, rate, and time
+        double principal = scanner.nextDouble();
+        double rate = scanner.nextDouble();
+        double time = scanner.nextDouble();
+        // Calculate the amount using the compound interest formula
+        double amount = principal * Math.pow((1 + rate / 100), time);
+        // Print the amount rounded to one decimal point
+        System.out.printf("%.1f\n", amount);
+    }
+}
