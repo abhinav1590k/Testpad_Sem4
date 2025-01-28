@@ -1,0 +1,8 @@
+// // Write overloaded static void display(String a) and static void display(String a, String b) functions
+  public static void display(String a) {
+        System.out.println(a);
+    }
+    // Overloaded display function for 2 strings
+    public static void display(String a, String b) {
+        System.out.println(a + "-" + b);
+    }
