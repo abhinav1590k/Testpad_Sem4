@@ -1,0 +1,40 @@
+class Box {
+    // Private dimensions of the box
+    private int length;
+    private int breadth;
+    private int height;
+    // Default constructor initializes dimensions to 0
+    public Box() {
+        this.length = 0;
+        this.breadth = 0;
+        this.height = 0;
+    }
+    // Parameterized constructor initializes dimensions to given values
+    public Box(int length, int breadth, int height) {
+        this.length = length;
+        this.breadth = breadth;
+        this.height = height;
+    }
+    // Copy constructor initializes dimensions to another Box's dimensions
+    public Box(Box b1) {
+        this.length = b1.length;
+        this.breadth = b1.breadth;
+        this.height = b1.height;
+    }
+    // Method to get the length of the box
+    public int getLength() {
+        return length;
+    }
+    // Method to get the breadth of the box
+    public int getBreadth() {
+        return breadth;
+    }
+    // Method to get the height of the box
+    public int getHeight() {
+        return height;
+    }
+    // Method to calculate the volume of the box
+    public long CalculateVolume() {
+        return (long) length * breadth * height; // Volume = length * breadth * height
+    }
+}
