@@ -1,0 +1,15 @@
+public boolean bankFees(double fee) {
+        double totalFees = 0.0;
+        // Calculate total fees based on the number of transactions
+        for (int i = 1; i <= transactions; i++) {
+            totalFees += fee * i; // fee for the i-th transaction
+        }
+        // Check if the balance can cover the total fees
+        if (balance > totalFees) {
+            balance -= totalFees; // Deduct the total fees from the balance
+            return true; // Fees applied successfully
+        } else {
+            balance = 0.0; // Set balance to 0 if not enough to cover fees
+            return false; // Not enough balance to cover fees
+        }
+    }
