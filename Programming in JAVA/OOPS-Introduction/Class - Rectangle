@@ -1,0 +1,35 @@
+import java.util.Scanner;
+// Other imports go here// Do NOT change the class name
+class Rectangle {
+    private int x;      // x-coordinate of the top-left corner
+    private int y;      // y-coordinate of the top-left corner
+    private int width;  // width of the rectangle
+    private int height; // height of the rectangle
+    // Constructor to initialize the rectangle ```java
+    public Rectangle(int x, int y, int width, int height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+    // Method to get the height of the rectangle
+    public int getHeight() {
+        return height;
+    }
+    // Method to get the width of the rectangle
+    public int getWidth() {
+        return width;
+    }
+    // Method to get the x-coordinate of the rectangle
+    public int getX() {
+        return x;
+    }
+    // Method to get the y-coordinate of the rectangle
+    public int getY() {
+        return y;
+    }
+    // Method to return a string representation of the rectangle
+    public String toString() {
+        return "Rectangle[x=" + x + ",y=" + y + ",width=" + width + ",height=" + height + "]";
+    }
+}
