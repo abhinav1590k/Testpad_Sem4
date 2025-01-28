@@ -1,0 +1,13 @@
+static boolean verifyPrime(int n) {
+        // Basic checks
+        if (n <= 1) return false; // 0 and 1 are not prime
+        if (n <= 3) return true;  // 2 and 3 are prime
+        if (n % 2 == 0) return false; // Exclude even numbers greater than 2
+        // Check for factors from 3 to sqrt(n)
+        for (int i = 3; i * i <= n; i += 2) {
+            if (n % i == 0) {
+                return false; // Found a factor, not prime
+            }
+        }
+        return true; // No factors found, it's prime
+    }
